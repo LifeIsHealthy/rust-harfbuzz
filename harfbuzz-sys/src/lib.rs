@@ -1023,7 +1023,7 @@ extern "C" {
  * @user_data:
  * @destroy:
  *
- * 
+ *
  *
  * Since: 0.9.2
  **/
@@ -1044,7 +1044,7 @@ extern "C" {
  * @user_data:
  * @destroy:
  *
- * 
+ *
  *
  * Since: 0.9.2
  **/
@@ -1065,7 +1065,7 @@ extern "C" {
  * @user_data:
  * @destroy:
  *
- * 
+ *
  *
  * Since: 0.9.2
  **/
@@ -1086,7 +1086,7 @@ extern "C" {
  * @user_data:
  * @destroy:
  *
- * 
+ *
  *
  * Since: 0.9.2
  **/
@@ -1106,7 +1106,7 @@ extern "C" {
  * @user_data:
  * @destroy:
  *
- * 
+ *
  *
  * Since: 0.9.2
  **/
@@ -1124,7 +1124,7 @@ extern "C" {
  * @user_data:
  * @destroy:
  *
- * 
+ *
  *
  * Since: 0.9.2
  **/
@@ -1142,7 +1142,7 @@ extern "C" {
  * @user_data:
  * @destroy:
  *
- * 
+ *
  *
  * Since: 0.9.2
  **/
@@ -1162,7 +1162,7 @@ extern "C" {
  * @user_data:
  * @destroy:
  *
- * 
+ *
  *
  * Since: 0.9.2
  **/
@@ -1551,7 +1551,7 @@ extern "C" {
  * @user_data:
  * @destroy:
  *
- * 
+ *
  *
  * Since: 1.2.3
  **/
@@ -1570,7 +1570,7 @@ extern "C" {
  * @user_data:
  * @destroy:
  *
- * 
+ *
  *
  * Since: 1.2.3
  **/
@@ -1590,7 +1590,7 @@ extern "C" {
  * @user_data:
  * @destroy:
  *
- * 
+ *
  *
  * Since: 0.9.2
  **/
@@ -1610,7 +1610,7 @@ extern "C" {
  * @user_data:
  * @destroy:
  *
- * 
+ *
  *
  * Since: 0.9.2
  **/
@@ -1630,7 +1630,7 @@ extern "C" {
  * @user_data:
  * @destroy:
  *
- * 
+ *
  *
  * Since: 0.9.2
  **/
@@ -1649,7 +1649,7 @@ extern "C" {
  * @user_data:
  * @destroy:
  *
- * 
+ *
  *
  * Since: 0.9.2
  **/
@@ -1668,7 +1668,7 @@ extern "C" {
  * @user_data:
  * @destroy:
  *
- * 
+ *
  *
  * Since: 0.9.2
  **/
@@ -1688,7 +1688,7 @@ extern "C" {
  * @user_data:
  * @destroy:
  *
- * 
+ *
  *
  * Since: 0.9.2
  **/
@@ -1708,7 +1708,7 @@ extern "C" {
  * @user_data:
  * @destroy:
  *
- * 
+ *
  *
  * Since: 0.9.2
  **/
@@ -1727,7 +1727,7 @@ extern "C" {
  * @user_data:
  * @destroy:
  *
- * 
+ *
  *
  * Since: 0.9.2
  **/
@@ -1748,7 +1748,7 @@ extern "C" {
  * @user_data:
  * @destroy:
  *
- * 
+ *
  *
  * Since: 0.9.2
  **/
@@ -1767,7 +1767,7 @@ extern "C" {
  * @user_data:
  * @destroy:
  *
- * 
+ *
  *
  * Since: 0.9.2
  **/
@@ -2043,7 +2043,7 @@ extern "C" {
  * hb_glyph_info_t:
  * @codepoint: either a Unicode code point (before shaping) or a glyph index
  *             (after shaping).
- * @mask: 
+ * @mask:
  * @cluster: the index of the character in the original text that corresponds
  *           to this #hb_glyph_info_t, or whatever the client passes to
  *           hb_buffer_add(). More than one #hb_glyph_info_t can have the same
@@ -3262,6 +3262,8 @@ fn bindgen_test_layout_hb_ot_math_glyph_variant_t() {
 impl Clone for hb_ot_math_glyph_variant_t {
     fn clone(&self) -> Self { *self }
 }
+pub const HB_MATH_GLYPH_PART_FLAG_NONE: _bindgen_ty_15 =
+    _bindgen_ty_15::HB_MATH_GLYPH_PART_FLAG_NONE;
 pub const HB_MATH_GLYPH_PART_FLAG_EXTENDER: _bindgen_ty_15 =
     _bindgen_ty_15::HB_MATH_GLYPH_PART_FLAG_EXTENDER;
 #[repr(u32)]
@@ -3271,7 +3273,10 @@ pub const HB_MATH_GLYPH_PART_FLAG_EXTENDER: _bindgen_ty_15 =
  * Since: 1.3.3
  */
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
-pub enum _bindgen_ty_15 { HB_MATH_GLYPH_PART_FLAG_EXTENDER = 1, }
+pub enum _bindgen_ty_15 {
+    HB_MATH_GLYPH_PART_FLAG_NONE = 0,
+    HB_MATH_GLYPH_PART_FLAG_EXTENDER = 1,
+}
 pub use self::_bindgen_ty_15 as hb_ot_math_glyph_part_flags_t;
 /**
  * hb_ot_math_glyph_part_t:
