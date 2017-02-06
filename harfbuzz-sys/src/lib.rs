@@ -1023,7 +1023,7 @@ extern "C" {
  * @user_data:
  * @destroy:
  *
- * 
+ *
  *
  * Since: 0.9.2
  **/
@@ -1044,7 +1044,7 @@ extern "C" {
  * @user_data:
  * @destroy:
  *
- * 
+ *
  *
  * Since: 0.9.2
  **/
@@ -1065,7 +1065,7 @@ extern "C" {
  * @user_data:
  * @destroy:
  *
- * 
+ *
  *
  * Since: 0.9.2
  **/
@@ -1086,7 +1086,7 @@ extern "C" {
  * @user_data:
  * @destroy:
  *
- * 
+ *
  *
  * Since: 0.9.2
  **/
@@ -1106,7 +1106,7 @@ extern "C" {
  * @user_data:
  * @destroy:
  *
- * 
+ *
  *
  * Since: 0.9.2
  **/
@@ -1124,7 +1124,7 @@ extern "C" {
  * @user_data:
  * @destroy:
  *
- * 
+ *
  *
  * Since: 0.9.2
  **/
@@ -1142,7 +1142,7 @@ extern "C" {
  * @user_data:
  * @destroy:
  *
- * 
+ *
  *
  * Since: 0.9.2
  **/
@@ -1162,7 +1162,7 @@ extern "C" {
  * @user_data:
  * @destroy:
  *
- * 
+ *
  *
  * Since: 0.9.2
  **/
@@ -1551,7 +1551,7 @@ extern "C" {
  * @user_data:
  * @destroy:
  *
- * 
+ *
  *
  * Since: 1.2.3
  **/
@@ -1570,7 +1570,7 @@ extern "C" {
  * @user_data:
  * @destroy:
  *
- * 
+ *
  *
  * Since: 1.2.3
  **/
@@ -1590,7 +1590,7 @@ extern "C" {
  * @user_data:
  * @destroy:
  *
- * 
+ *
  *
  * Since: 0.9.2
  **/
@@ -1610,7 +1610,7 @@ extern "C" {
  * @user_data:
  * @destroy:
  *
- * 
+ *
  *
  * Since: 0.9.2
  **/
@@ -1630,7 +1630,7 @@ extern "C" {
  * @user_data:
  * @destroy:
  *
- * 
+ *
  *
  * Since: 0.9.2
  **/
@@ -1649,7 +1649,7 @@ extern "C" {
  * @user_data:
  * @destroy:
  *
- * 
+ *
  *
  * Since: 0.9.2
  **/
@@ -1668,7 +1668,7 @@ extern "C" {
  * @user_data:
  * @destroy:
  *
- * 
+ *
  *
  * Since: 0.9.2
  **/
@@ -1688,7 +1688,7 @@ extern "C" {
  * @user_data:
  * @destroy:
  *
- * 
+ *
  *
  * Since: 0.9.2
  **/
@@ -1708,7 +1708,7 @@ extern "C" {
  * @user_data:
  * @destroy:
  *
- * 
+ *
  *
  * Since: 0.9.2
  **/
@@ -1727,7 +1727,7 @@ extern "C" {
  * @user_data:
  * @destroy:
  *
- * 
+ *
  *
  * Since: 0.9.2
  **/
@@ -1748,7 +1748,7 @@ extern "C" {
  * @user_data:
  * @destroy:
  *
- * 
+ *
  *
  * Since: 0.9.2
  **/
@@ -1767,7 +1767,7 @@ extern "C" {
  * @user_data:
  * @destroy:
  *
- * 
+ *
  *
  * Since: 0.9.2
  **/
@@ -2043,7 +2043,7 @@ extern "C" {
  * hb_glyph_info_t:
  * @codepoint: either a Unicode code point (before shaping) or a glyph index
  *             (after shaping).
- * @mask: 
+ * @mask:
  * @cluster: the index of the character in the original text that corresponds
  *           to this #hb_glyph_info_t, or whatever the client passes to
  *           hb_buffer_add(). More than one #hb_glyph_info_t can have the same
@@ -2245,15 +2245,20 @@ extern "C" {
 extern "C" {
     pub fn hb_buffer_guess_segment_properties(buffer: *mut hb_buffer_t);
 }
-pub const HB_BUFFER_FLAG_DEFAULT: _bindgen_ty_8 =
-    _bindgen_ty_8::HB_BUFFER_FLAG_DEFAULT;
-pub const HB_BUFFER_FLAG_BOT: _bindgen_ty_8 =
-    _bindgen_ty_8::HB_BUFFER_FLAG_BOT;
-pub const HB_BUFFER_FLAG_EOT: _bindgen_ty_8 =
-    _bindgen_ty_8::HB_BUFFER_FLAG_EOT;
+pub const HB_BUFFER_FLAG_DEFAULT: _bindgen_ty_8 = _bindgen_ty_8(0);
+pub const HB_BUFFER_FLAG_BOT: _bindgen_ty_8 = _bindgen_ty_8(1);
+pub const HB_BUFFER_FLAG_EOT: _bindgen_ty_8 = _bindgen_ty_8(2);
 pub const HB_BUFFER_FLAG_PRESERVE_DEFAULT_IGNORABLES: _bindgen_ty_8 =
-    _bindgen_ty_8::HB_BUFFER_FLAG_PRESERVE_DEFAULT_IGNORABLES;
-#[repr(u32)]
+    _bindgen_ty_8(4);
+impl ::std::ops::BitOr<_bindgen_ty_8> for _bindgen_ty_8 {
+    type
+    Output
+    =
+    Self;
+    #[inline]
+    fn bitor(self, other: Self) -> Self { _bindgen_ty_8(self.0 | other.0) }
+}
+#[repr(C)]
 /**
  * hb_buffer_flags_t:
  * @HB_BUFFER_FLAG_DEFAULT: the default buffer flag.
@@ -2274,12 +2279,7 @@ pub const HB_BUFFER_FLAG_PRESERVE_DEFAULT_IGNORABLES: _bindgen_ty_8 =
  * Since: 0.9.20
  */
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
-pub enum _bindgen_ty_8 {
-    HB_BUFFER_FLAG_DEFAULT = 0,
-    HB_BUFFER_FLAG_BOT = 1,
-    HB_BUFFER_FLAG_EOT = 2,
-    HB_BUFFER_FLAG_PRESERVE_DEFAULT_IGNORABLES = 4,
-}
+pub struct _bindgen_ty_8(pub ::std::os::raw::c_uint);
 pub use self::_bindgen_ty_8 as hb_buffer_flags_t;
 extern "C" {
     pub fn hb_buffer_set_flags(buffer: *mut hb_buffer_t,
@@ -2404,16 +2404,24 @@ extern "C" {
     pub fn hb_buffer_normalize_glyphs(buffer: *mut hb_buffer_t);
 }
 pub const HB_BUFFER_SERIALIZE_FLAG_DEFAULT: _bindgen_ty_10 =
-    _bindgen_ty_10::HB_BUFFER_SERIALIZE_FLAG_DEFAULT;
+    _bindgen_ty_10(0);
 pub const HB_BUFFER_SERIALIZE_FLAG_NO_CLUSTERS: _bindgen_ty_10 =
-    _bindgen_ty_10::HB_BUFFER_SERIALIZE_FLAG_NO_CLUSTERS;
+    _bindgen_ty_10(1);
 pub const HB_BUFFER_SERIALIZE_FLAG_NO_POSITIONS: _bindgen_ty_10 =
-    _bindgen_ty_10::HB_BUFFER_SERIALIZE_FLAG_NO_POSITIONS;
+    _bindgen_ty_10(2);
 pub const HB_BUFFER_SERIALIZE_FLAG_NO_GLYPH_NAMES: _bindgen_ty_10 =
-    _bindgen_ty_10::HB_BUFFER_SERIALIZE_FLAG_NO_GLYPH_NAMES;
+    _bindgen_ty_10(4);
 pub const HB_BUFFER_SERIALIZE_FLAG_GLYPH_EXTENTS: _bindgen_ty_10 =
-    _bindgen_ty_10::HB_BUFFER_SERIALIZE_FLAG_GLYPH_EXTENTS;
-#[repr(u32)]
+    _bindgen_ty_10(8);
+impl ::std::ops::BitOr<_bindgen_ty_10> for _bindgen_ty_10 {
+    type
+    Output
+    =
+    Self;
+    #[inline]
+    fn bitor(self, other: Self) -> Self { _bindgen_ty_10(self.0 | other.0) }
+}
+#[repr(C)]
 /**
  * hb_buffer_serialize_flags_t:
  * @HB_BUFFER_SERIALIZE_FLAG_DEFAULT: serialize glyph names, clusters and positions.
@@ -2427,13 +2435,7 @@ pub const HB_BUFFER_SERIALIZE_FLAG_GLYPH_EXTENTS: _bindgen_ty_10 =
  * Since: 0.9.20
  */
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
-pub enum _bindgen_ty_10 {
-    HB_BUFFER_SERIALIZE_FLAG_DEFAULT = 0,
-    HB_BUFFER_SERIALIZE_FLAG_NO_CLUSTERS = 1,
-    HB_BUFFER_SERIALIZE_FLAG_NO_POSITIONS = 2,
-    HB_BUFFER_SERIALIZE_FLAG_NO_GLYPH_NAMES = 4,
-    HB_BUFFER_SERIALIZE_FLAG_GLYPH_EXTENTS = 8,
-}
+pub struct _bindgen_ty_10(pub ::std::os::raw::c_uint);
 pub use self::_bindgen_ty_10 as hb_buffer_serialize_flags_t;
 pub const HB_BUFFER_SERIALIZE_FORMAT_TEXT: _bindgen_ty_11 =
     _bindgen_ty_11::HB_BUFFER_SERIALIZE_FORMAT_TEXT;
@@ -3263,15 +3265,23 @@ impl Clone for hb_ot_math_glyph_variant_t {
     fn clone(&self) -> Self { *self }
 }
 pub const HB_MATH_GLYPH_PART_FLAG_EXTENDER: _bindgen_ty_15 =
-    _bindgen_ty_15::HB_MATH_GLYPH_PART_FLAG_EXTENDER;
-#[repr(u32)]
+    _bindgen_ty_15(1);
+impl ::std::ops::BitOr<_bindgen_ty_15> for _bindgen_ty_15 {
+    type
+    Output
+    =
+    Self;
+    #[inline]
+    fn bitor(self, other: Self) -> Self { _bindgen_ty_15(self.0 | other.0) }
+}
+#[repr(C)]
 /**
  * hb_ot_math_glyph_part_flags_t:
  *
  * Since: 1.3.3
  */
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
-pub enum _bindgen_ty_15 { HB_MATH_GLYPH_PART_FLAG_EXTENDER = 1, }
+pub struct _bindgen_ty_15(pub ::std::os::raw::c_uint);
 pub use self::_bindgen_ty_15 as hb_ot_math_glyph_part_flags_t;
 /**
  * hb_ot_math_glyph_part_t:
